@@ -1,12 +1,6 @@
 #include <GL/glut.h>
 #include <math.h>
 
-GLuint texture[35];
-GLint slices = 35;
-GLint stacks = 35;
-
-using namespace std;
-
 float ypos = 0, zpos = 0, xpos = 0;
 float a = -9, b = -5, c = -30;
 float angleX = 0.0f, angleY = 0.0f;
@@ -14,20 +8,7 @@ float lastX = 0.0f, lastY = 0.0f;
 float scale_factor = 1.0f;
 float pintu = 0;
 bool hidden = true;
-int z = 0;
 void initLighting();
-
-struct Image
-{
-    unsigned long sizeX;
-    unsigned long sizeY;
-    char *data;
-};
-typedef struct Image Image;
-#define checkImageWidth 164
-#define checkImageHeight 164
-
-GLubyte checkImage[checkImageWidth][checkImageHeight][3];
 
 void kotak(float x1, float y1, float z1, float x2, float y2, float z2)
 {
